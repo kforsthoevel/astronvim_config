@@ -3,4 +3,5 @@ return {
   opts = {
     -- ensure_installed = { "lua" },
   },
+  auto_install = true,
 }
