@@ -11,27 +11,25 @@ return {
     -- experimental = {
     --   ghost_text = true,
     -- },
-    -- sources = {
-    --   { name = "nvim_lsp", priority = 1000 },
-    --   { name = "luasnip", priority = 700 },
-    --   { name = "path", priority = 650 },
-    --   {
-    --     name = "buffer",
-    --     priority = 400,
-    --     option = {
-    --       get_bufnrs = function() return vim.api.nvim_list_bufs() end,
-    --     },
-    --   },
-    -- },
+    sources = {
+      { name = "nvim_lsp", priority = 1000 },
+      { name = "luasnip", priority = 700 },
+      { name = "path", priority = 650 },
+      {
+        name = "buffer",
+        priority = 400,
+        option = {
+          get_bufnrs = function() return vim.api.nvim_list_bufs() end,
+        },
+      },
+    },
   },
-
   cmp.setup.cmdline({ "/", "?" }, {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
       { name = "buffer" },
     },
   }),
-
   cmp.setup.cmdline(":", {
     mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
