@@ -7,12 +7,16 @@ return {
     opts = {
       ensure_installed = {
         "bashls",
+        "golangci_lint_ls",
+        "gopls",
         "lua_ls",
+        "marksman",
         "pyright",
         "solargraph",
         "terraformls",
         "tflint",
         "tsserver",
+        "yamlls",
       },
     },
   },
@@ -21,7 +25,7 @@ return {
     "jay-babu/mason-null-ls.nvim",
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
-      -- ensure_installed = { "prettier", "stylua" },
+      ensure_installed = { "prettier", "stylua", "vale", "yamllint" },
     },
   },
   {
