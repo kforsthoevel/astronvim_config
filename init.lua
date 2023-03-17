@@ -48,6 +48,16 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+      "helm_ls",
+    },
+    config = {
+      helm_ls = function()
+        return {
+          cmd = { "helm_ls", "serve" },
+          filetypes = { "helm" },
+          root_dir = function(fname) return require("lspconfig.util").root_pattern "Chart.yaml"(fname) end,
+        }
+      end,
     },
   },
   -- Configure require("lazy").setup() options
