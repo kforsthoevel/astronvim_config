@@ -7,6 +7,8 @@ return {
     opts = {
       ensure_installed = {
         "bashls",
+        "docker_compose_language_service",
+        "dockerls",
         "golangci_lint_ls",
         "gopls",
         "lua_ls",
