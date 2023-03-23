@@ -12,7 +12,7 @@ return {
     }
   end,
   keys = {
-    { "<leader>gn", "<cmd>Neogit<cr>", desc = "Neogit" },
+    { "<leader>gg", "<cmd>Neogit<cr>", desc = "Start Neogit" },
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
