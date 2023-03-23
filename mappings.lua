@@ -28,7 +28,7 @@ return {
       T = { "<cmd>TestFile -strategy=neovim<cr>", "Runs all tests in the current file" },
       a = { "<cmd>TestSuite -strategy=neovim<cr>", "Runs the whole test suite" },
       l = { "<cmd>TestLast -strategy=neovim<cr>", "Runs the last test" },
-      g = { "<cmd>TestVisit -strategy=neovim<cr>", "Visits the test file" },
+      g = { "<cmd>TestVisit<cr>", "Visits the test file" },
     },
   },
   t = {
