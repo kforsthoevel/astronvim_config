@@ -7,7 +7,7 @@ return {
         diffview = true,
       },
       commit_popup = {
-        kind = "replace",
+        kind = "vsplit",
       },
     }
   end,
