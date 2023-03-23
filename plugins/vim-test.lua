@@ -1,4 +1,4 @@
 return {
   "vim-test/vim-test",
-  lazy = false,
+  cmd = { "TestFile", "TestNearest", "TestSuite", "TestLast", "TestVisit" },
 }
