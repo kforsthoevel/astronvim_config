@@ -20,16 +20,9 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    ["<leader>k"] = { name = "Test" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>k"] = {
-      name = "Test",
-      t = { "<cmd>TestNearest -strategy=neovim<cr>", "Runs the test nearest to the cursor" },
-      T = { "<cmd>TestFile -strategy=neovim<cr>", "Runs all tests in the current file" },
-      a = { "<cmd>TestSuite -strategy=neovim<cr>", "Runs the whole test suite" },
-      l = { "<cmd>TestLast -strategy=neovim<cr>", "Runs the last test" },
-      g = { "<cmd>TestVisit<cr>", "Visits the test file" },
-    },
   },
   t = {
     -- setting a mapping to false will disable it
