@@ -21,6 +21,7 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     ["<leader>k"] = { name = "Test" },
+    ["<leader>x"] = { name = "Diagnostics/Quickfix" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
