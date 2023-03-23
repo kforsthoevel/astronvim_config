@@ -6,6 +6,9 @@ return {
       integrations = {
         diffview = true,
       },
+      commit_popup = {
+        kind = "replace",
+      },
     }
   end,
   keys = {
