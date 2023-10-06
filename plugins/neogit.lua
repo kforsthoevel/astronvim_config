@@ -1,12 +1,12 @@
 return {
-  "TimUntersberger/neogit",
+  "NeogitOrg/neogit",
   config = function()
     require("neogit").setup {
       disable_commit_confirmation = true,
       integrations = {
         diffview = true,
       },
-      commit_popup = {
+      commit_editor = {
         kind = "vsplit",
       },
     }
