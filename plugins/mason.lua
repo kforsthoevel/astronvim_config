@@ -7,10 +7,11 @@ return {
     opts = {
       ensure_installed = {
         "bashls",
-        "docker_compose_language_service",
+        -- "docker_compose_language_service",
         "dockerls",
         "golangci_lint_ls",
         "gopls",
+        "helm_ls",
         "lua_ls",
         "marksman",
         "pyright",
@@ -27,7 +28,7 @@ return {
     "jay-babu/mason-null-ls.nvim",
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
-      ensure_installed = { "prettier", "stylua", "vale", "yamllint" },
+      ensure_installed = { "prettier", "stylua", "vale", "yamllint", "hadolint", "ruff" },
     },
   },
   {
