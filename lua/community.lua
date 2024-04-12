@@ -8,18 +8,9 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.colorscheme.nightfox-nvim" },
-  {
-    "EdenEast/nightfox.nvim",
-    opts = {
-      options = {
-        styles = {
-          comments = "italic",
-          keywords = "bold",
-          types = "italic,bold",
-        },
-      },
-    },
-  },
+  { import = "astrocommunity.git.diffview-nvim" },
+  -- { import = "astrocommunity.git.neogit" },
   -- import/override with your plugins folder
 }
