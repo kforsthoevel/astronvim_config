@@ -13,6 +13,6 @@ return {
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.utility.telescope-fzy-native-nvim" },
   { import = "astrocommunity.editing-support.chatgpt-nvim" },
-  -- { import = "astrocommunity.git.neogit" },
+  { import = "astrocommunity.git.neogit" },
   -- import/override with your plugins folder
 }

@@ -1,28 +1,22 @@
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 return {
-  "NeogitOrg/neogit",
-  config = function()
-    require("neogit").setup {
-      disable_commit_confirmation = true,
-      integrations = {
-        diffview = true,
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      { "AstroNvim/astroui", opts = { icons = { Neogit = "󰰔" } } },
+      {
+        "AstroNvim/astrocore",
+        opts = function(_, opts)
+          local maps = opts.mappings
+          local prefix = "<Leader>g"
+          maps.n[prefix .. "n"] = { desc = require("astroui").get_icon("Neogit", 1, true) .. "Neogit" }
+          maps.n[prefix .. "nt"] = { "<Cmd>Neogit<CR>", desc = "Open Neogit Tab Page" }
+          maps.n[prefix .. "nc"] = { "<Cmd>Neogit commit<CR>", desc = "Open Neogit Commit Page" }
+          maps.n[prefix .. "nd"] = { ":Neogit cwd=", desc = "Open Neogit Override CWD" }
+          maps.n[prefix .. "nk"] = { ":Neogit kind=", desc = "Open Neogit Override Kind" }
+        end,
       },
-      commit_editor = {
-        kind = "vsplit",
-      },
-    }
-  end,
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "sindrets/diffview.nvim",
-    { "AstroNvim/astroui", opts = { icons = { Neogit = "󰰔" } } },
-    {
-      "AstroNvim/astrocore",
-      opts = function(_, opts)
-        local maps = opts.mappings
-        local prefix = "<Leader>g"
-        maps.n[prefix .. "g"] =
-          { "<Cmd>Neogit<CR>", desc = require("astroui").get_icon("Neogit", 1, true) .. "Open Neogit" }
-      end,
     },
     event = "User AstroGitFile",
     opts = function(_, opts)
@@ -42,5 +36,10 @@ return {
         signs = { section = fold_signs, item = fold_signs },
       })
     end,
+  },
+  {
+    "nightfox-nvim",
+    optional = true,
+    opts = { integrations = { neogit = true } },
   },
 }
