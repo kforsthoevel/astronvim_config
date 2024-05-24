@@ -75,7 +75,7 @@ return {
         ["<Leader>s"] = { desc = "Search" },
         ["<Leader>x"] = { desc = "Diagnostics/Quickfix" },
         -- Diable lazygit
-        ["<Leader>gg"] = false,
+        -- ["<Leader>gg"] = false,
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
       },
