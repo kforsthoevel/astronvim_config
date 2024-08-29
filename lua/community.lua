@@ -8,9 +8,10 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.colorscheme.nightfox-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
+  { import = "astrocommunity.icon.mini-icons" },
   { import = "astrocommunity.utility.telescope-fzy-native-nvim" },
   { import = "astrocommunity.editing-support.chatgpt-nvim" },
   { import = "astrocommunity.git.neogit" },
