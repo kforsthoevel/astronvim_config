@@ -39,7 +39,6 @@ return {
         "stylua",
         "vale",
         "yamllint",
-        "hadolint",
         "ruff",
         -- add more arguments for adding more null-ls sources
       })
